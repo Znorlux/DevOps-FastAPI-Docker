@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase Taller UdeM</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Estilos modernizados -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f9fafb;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      nav {
+        background-color: #111827;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 20px;
+        color: #f9fafb;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #60a5fa; /* Hover color */
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+      }
+
+      #contenido {
+        margin: 2rem auto;
+        padding: 2rem;
+        max-width: 800px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      label {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #e5e7eb;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #60a5fa;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #3b82f6;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2563eb;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav a {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <a href="/endpoint1">Endpoint 1</a>
+      <a href="/endpoint2">Endpoint 2</a>
+      <a href="/ruta/endpoint1">Endpoint 3</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <h1>{{ message }}</h1>
+
+    <div id="contenido">
+      <p>
+        {{ X }} Esto es solo una muestra de cómo se pasan variables (datos)
+        desde un backend a un frontend.
+      </p>
+
+      <!-- Formulario -->
+      <form method="get" action="/">
+        <label for="usuario">Usuario:</label>
+        <input
+          type="text"
+          name="username"
+          id="usuario"
+          placeholder="Ingresa tu usuario"
+          required
+        />
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+  </body>
+</html>
